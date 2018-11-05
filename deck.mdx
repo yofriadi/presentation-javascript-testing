@@ -1,0 +1,119 @@
+import {
+  Head,
+  Image
+} from 'mdx-deck'
+import {CodeSurfer} from 'mdx-deck-code-surfer'
+
+export {default as theme} from './theme'
+
+<Head>
+  <title>Javascript Testing</title>
+</Head>
+
+# Testing ROI
+
+<Image src="testing-roi.png" size="800px" width="800px" height="600px" />
+
+---
+
+# Write tests.
+# Not too many.
+# Mostly integration.
+
+Don't TDD everything. Don't mock too much. Don't strive for 100% coverage.
+
+---
+
+# General Principles
+
+* Mocking too much reduces test quality.
+* More isolation results in less bug caught.
+* Using real data or mocking is ok, but you should not use both in single test.
+* Each test case must not depend on each other.
+
+---
+
+# What makes a good test
+
+* Runs fast.
+* Does not break often.
+* Easy to read & understand.
+* Catches bug.
+* Good coverage to effort ratio.
+
+---
+
+# It takes a few iterations
+
+---
+
+# Once you found a good test strategy. Share it.
+###### or at least write it down in Confluence.
+
+---
+
+# Testing worksheet
+
+1. What would be the worst part to break.
+2. What are the untested parts related to this functionality.
+3. How do Users or System interact with this part.
+4. Repeat.
+
+---
+
+# Keep tests clean
+
+* Shared test utilities.
+* Generation of test templates.
+* Lint rules & documentation.
+
+---
+
+<CodeSurfer
+  title="Basic"
+  code={require("!raw-loader!./basic.js")}
+  steps={[
+    { notes: "Getting started"},
+    { lines: [1, 9], notes: "use `describe` to group tests together" },
+    { range: [2, 8], notes: "don't use `describe` if you have only one top level group" },
+    { lines: [2, 4], notes: "use `test` to describe things" },
+    { lines: [6, 8], notes: "use `it` to describe actions" },
+    { lines: [3, 7], notes: "don't forget to test" }
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Common"
+  code={require("!raw-loader!./common.js")}
+  steps={[
+    { notes: "Common things currently I used"},
+    { lines: [1], notes: "use `faker` to generate fake data" },
+    { lines: [6, 8, 12], notes: "from `number`" },
+    { lines: [7, 9, 11], notes: "`dates`" },
+    { lines: [14, 15], notes: "to `internet`" },
+    { lines: [3, 10, 13], notes: "or create your own if not provided" }
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Great tools to know"
+  code={require("!raw-loader!./extended.js")}
+  steps={[
+    { notes: "Seberapa greget gua, gua ngoding pakai vim, didalem terminal vscode" },
+    { range: [1, 7], notes: "Jest extended: additional jest matchers" },
+    { lines: [1, 2], notes: "bloated error string" },
+    { lines: [4, 5], notes: "what I'm actually care about" },
+    { lines: [7], notes: "any question ?" },
+    { range: [9, 21], notes: "Jest chain: chain Jest matchers together to create one powerful assertion" },
+    { range: [9, 14], notes: "hm nothings wrong" },
+    { range: [16, 21], notes: "shut up and take my money" }
+  ]}
+/>
+
+---
+
+<Image src="the-null-pointer-exception.jpg" size="500px" />

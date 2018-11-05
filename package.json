@@ -1,0 +1,20 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "Pomona presentation for testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "mdx-deck deck.mdx"
+  },
+  "keywords": [
+    "Pomona",
+    "Testing"
+  ],
+  "author": "Pomona IT Team",
+  "license": "MIT",
+  "devDependencies": {
+    "mdx-deck": "^1.7.7",
+    "mdx-deck-code-surfer": "^0.5.3",
+    "raw-loader": "^0.5.1"
+  }
+}
